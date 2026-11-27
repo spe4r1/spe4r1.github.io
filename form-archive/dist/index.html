@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0c">
+  <meta name="description" content="SPE4R의 보안 포트폴리오. Android 인텐트 취약점 연구, Cloud IPS SaaS 개발 프로젝트, 교육 및 수상 이력.">
+  <title>SPE4R — Portfolio</title>
+  <link rel="icon" href="assets/mark.png">
+  <link rel="preload" as="image" href="assets/knot.webp">
+  <link rel="stylesheet" href="style.css?v=portfolio-4">
+  <link rel="stylesheet" href="entrance.css">
+  <script>
+    // Hold the first paint only while the entrance renderer starts.
+    if (!location.hash || location.hash === "#top") {
+      document.documentElement.classList.add("entry-pending");
+      setTimeout(() => document.documentElement.classList.remove("entry-pending"), 1800);
+    }
+  </script>
+  <script src="portfolio.js?v=portfolio-5" defer></script>
+  <script src="site.js?v=portfolio-4" defer></script>
+  <script src="entrance.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header class="header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="포트폴리오 처음으로">
+        <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span data-brand>SPE4R</span>
+      </a>
+      <nav aria-label="주 메뉴">
+        <a href="#projects">프로젝트</a><a href="#experience">이력</a><a href="#contact">연락처</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span id="headline">SPE4R</span><em id="headline-accent">portfolio.</em></h1>
+        <div class="hero-links">
+          <a class="primary" href="#projects"><i class="grid-icon" aria-hidden="true"></i>프로젝트 보기</a>
+          <a class="secondary" href="#about">자기소개</a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <div class="plot" aria-hidden="true"></div>
+        <div class="register" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <img class="sculpture" src="assets/knot.webp" width="1204" height="1250" alt="촘촘한 은빛 주름이 세 겹으로 맞물린 매듭 조형물" fetchpriority="high">
+        <figcaption><span></span>KNOT STUDY <b>/</b> DIGITAL SCULPTURE
+          <button id="replay-entry" type="button" hidden aria-label="인트로 다시 보기" title="인트로 다시 보기">↻</button>
+        </figcaption>
+      </figure>
+    </section>
+    <section class="work section-line" id="projects" aria-labelledby="projects-title">
+      <div class="shell" id="articles">
+        <div class="section-head">
+          <h2 id="projects-title">Projects<span class="count" id="count"></span></h2>
+          <div class="filters" role="group" aria-label="프로젝트 유형 선택" id="filters"></div>
+        </div>
+        <div class="cards" id="cards"></div>
+        <p class="sr-only" id="filter-status" role="status"></p>
+      </div>
+    </section>
+    <section class="about section-line" id="about" aria-labelledby="about-title">
+      <div class="shell about-inner">
+        <h2 id="about-title">About me</h2>
+        <div><p class="about-text" id="about-text"></p>
+          <dl class="profile-fields" id="profile-fields"></dl>
+        </div>
+      </div>
+    </section>
+    <section class="about section-line" id="experience" aria-labelledby="experience-title">
+      <div class="shell about-inner">
+        <h2 id="experience-title">Experience</h2>
+        <div class="resume" id="resume"></div>
+      </div>
+    </section>
+    <section class="contact section-line" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <h2 id="contact-title">Contact</h2>
+        <div id="contact-info"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="section-line"><div class="shell footer-inner">
+    <span class="footer-brand" data-brand>SPE4R</span><a href="#top">맨 위로</a>
+  </div></footer>
+  <dialog id="entrance" aria-label="포트폴리오 인트로">
+    <canvas aria-hidden="true"></canvas>
+    <div class="entry-chrome">
+      <div class="brand" aria-hidden="true">
+        <span class="mark"><i></i><i></i><i></i></span><span data-brand>SPE4R</span>
+      </div>
+      <div class="entry-controls">
+        <div class="entry-caption" aria-hidden="true"><i></i>KNOT STUDY</div>
+        <button type="button" id="skip-entry" autofocus>건너뛰기</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
