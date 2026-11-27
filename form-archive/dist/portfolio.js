@@ -8,6 +8,7 @@ window.portfolio = {
     { label: "학력·교육", entries: [
       { title: "대구대학교", detail: "사이버보안전공" },
       { title: "화이트햇 스쿨", detail: "4기 수료" },
+      { title: "KISA 실전형 사이버훈련장", detail: "스피어피싱 과정" },
       { title: "42경산" }
     ] },
     { label: "실무 경험", entries: [
